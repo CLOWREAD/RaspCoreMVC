@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <button onclick="heart()">HEART</button>
+        <button onclick="circle()">CIRCLE</button>
+
+    <script type="text/javascript">
+        async function heart()
+        {
+
+        var a = await fetch("/api/LEDMATRIX/HEART", {method:"POST"});
+        }
+        async function circle() {
+
+            var a = await fetch("/api/LEDMATRIX/CIRCLE", { method: "POST" });
+        }
+    </script>
+</div>
